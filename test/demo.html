@@ -144,7 +144,7 @@
         <div class="key"><a id="btn-A" href="#A">财务处</a></div>
         <div class="key"><a id="btn-B" href="#B">国际交流学院</a></div>
         <div class="key"><a id="btn-C" href="#C">计算机学院</a></div>
-        <div class="key"><a id="btn-D" class="active" href="#A">财务处</a></div>
+        <div class="key"><a id="btn-D" class="" href="#A">财务处</a></div>
         <div class="key"><a id="btn-E" href="#B">国际交流学院</a></div>
         <div class="key"><a id="btn-F" href="#C">计算机学院</a></div>
         <div class="key"><a id="btn-G" href="#A">财务处</a></div>
@@ -236,6 +236,9 @@
 <!--<script src="assets/js/custom-scripts.js"></script>-->
 <script>
     $("#btn-A").on('click', function () {
+        $("#btn-A").addClass('active');
+        $("#btn-B").removeClass('active');
+        $("#btn-C").removeClass('active');
         $(".A-card").css({
             'background-color': '#e0e0e0',
             'box-shadow': '0 0 10px #b1b1b1',
@@ -253,6 +256,9 @@
         });
     });
     $("#btn-B").on('click', function () {
+        $("#btn-B").addClass('active');
+        $("#btn-A").removeClass('active');
+        $("#btn-C").removeClass('active');
         $(".B-card").css({
             'background-color': '#e0e0e0',
             'box-shadow': '0 0 10px #b1b1b1'
@@ -267,6 +273,9 @@
         });
     })
     $("#btn-C").on('click', function () {
+        $("#btn-C").addClass('active');
+        $("#btn-B").removeClass('active');
+        $("#btn-A").removeClass('active');
         $(".B-card").css({
             'background-color': 'none',
             'box-shadow': 'none'
