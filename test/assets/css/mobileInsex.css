@@ -1,0 +1,156 @@
+/*body{*/
+/*background-color: red;*/
+/*}*/
+#page-wrapper {
+    min-width: 340px;
+    margin: 0 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+#page-inner {
+    /*background-color: #333;*/
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+.mobile-nav-top {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    min-height: 100px;
+}
+
+.mobile-nav-side {
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    width: 25%;
+}
+
+.nav a {
+    color: #444;
+}
+
+.mobile-menu {
+    border: 1px solid #ddd;
+    border-left: none;
+    border-bottom: none;
+}
+
+.mobile-active-menu {
+    border: none;
+    border-left: 2px solid #1BACD4;
+    border-top: 1px solid #ddd;
+}
+
+.nav > li > a {
+    font-size: 1.8vw;
+    padding: 0 5px !important;
+}
+
+.mobile-active-menu a {
+    color: #1BACD4 !important;
+}
+
+.nav-body {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    color: white;
+}
+
+.user-icon img {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.user-text {
+
+}
+
+.user-name {
+    font-size: 2.8vw;
+    font-weight: bold;
+}
+
+.user-id {
+    font-size: 1.5vw;
+}
+
+.user-inumber {
+    font-size: 1.5vw;
+}
+
+.tool {
+    position: absolute;
+    height: 40px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 40px;
+    top: 75px;
+}
+
+.tool button {
+    font-size: 1.8vw;
+    border: none;
+    background-color: #fff;
+    width: 50%;
+    height: 40px;
+    float: left;
+}
+
+.btn-left {
+    -webkit-border-top-left-radius: 40px;
+    -webkit-border-bottom-left-radius: 40px;
+}
+
+.btn-right {
+    /*border-left: 1px solid #00f;*/
+    -webkit-border-top-right-radius: 40px;
+    -webkit-border-bottom-right-radius: 40px;
+}
+
+.mobile-rest {
+    position: absolute;
+}
+
+.department-title {
+    margin: 10px 0 5px 0;
+    color: #777;
+}
+
+.nav-ul {
+    overflow: scroll;
+}
+
+.project-area {
+    overflow: scroll;
+}
+
+@media (min-width: 768px) {
+    #page-wrapper {
+        margin: 0 0 0 0;
+        padding: 15px 0px;
+        min-height: 900px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header small {
+        display: block;
+        padding-top: 14px;
+        font-size: 19px;
+    }
+}
+
+

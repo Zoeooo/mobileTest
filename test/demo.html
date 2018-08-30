@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dream</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="assets/css/cardComponent.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .top {
+            width: 100%;
+            height: 120px;
+            position: fixed;
+            background-color: #0e90d2;
+            top: 0;
+            z-index: 99;
+        }
+
+        .side {
+            width: 25%;
+            height: 100%;
+            position: fixed;
+            top: 120px;
+            background-color: #00CC99;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 100%;
+            background-color: #a377ff;
+            padding: 0;
+            margin: 0;
+        }
+        #page-wrap{
+            height: 100%;
+        }
+
+        #page-inne {
+            top: 120px;
+            margin: 0 0 0 25%;
+            height: 100%;
+        }
+        .inne{
+            position: absolute;
+            top: 0px;
+            height: 100%;
+            background-color: #1F1F1F;
+        }
+
+        .part {
+            position: static;
+            background-color: #fff;
+            padding: 120px 0 0 0;
+
+        }
+
+        .head {
+            height: 120px;
+            width: 100%;
+            background-color: #0e90d2;
+        }
+
+        .obj {
+            width: 65px;
+            height: 65px;
+            margin: 3% auto 5%;
+            border-radius: 50%;
+        }
+
+        .card {
+            margin: 3% 0;
+            height: auto;
+            padding: 5px;
+        }
+
+        .card .obj-title {
+            font-size: 1rem;
+            width: 65px;
+            margin: 0 auto;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+        }
+
+        .key {
+            width: 100%;
+            height: 40px;
+            background-color: #008869;
+            border-bottom: 1px solid #5BD7A9;
+        }
+
+        .key a {
+            width: 100%;
+            color: #333;
+            font-weight: bold;
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            text-align: center;
+        }
+
+        .A-card {
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <nav class="top">
+    </nav>
+    <nav class="side">
+        <div class="key"><a id="btn-A" href="#A">A</a></div>
+        <div class="key"><a id="btn-B" href="#B">B</a></div>
+        <div class="key"><a id="btn-C" href="#C">C</a></div>
+    </nav>
+    <div id="page-wrap">
+        <div id="page-inne">
+            <div class="inne">
+                <div id="A" class="col-xs-12 part">
+                    <div id="B" class="col-xs-4 card A-card">
+                        <div class="pink obj">A</div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card A-card">
+                        <div class="blue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card A-card">
+                        <div class="yello obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card A-card">
+                        <div class="blue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card B-card">
+                        <div class="lightblue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card B-card">
+                        <div class="purple obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card B-card">
+                        <div class="pink obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card B-card">
+                        <div class="blue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card B-card">
+                        <div class="pink obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div id="C" class="col-xs-4 card C-card">
+                        <div class="blue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card C-card">
+                        <div class="yello obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card C-card">
+                        <div class="blue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card C-card">
+                        <div class="lightblue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card C-card">
+                        <div class="purple obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card C-card">
+                        <div class="pink obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                    <div class="col-xs-4 card C-card">
+                        <div class="blue obj"></div>
+                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="assets/js/jquery-1.10.2.js"></script>
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!--&lt;!&ndash; Metis Menu Js &ndash;&gt;-->
+<!--<script src="assets/js/jquery.metisMenu.js"></script>-->
+<!--&lt;!&ndash; Custom Js &ndash;&gt;-->
+<!--<script src="assets/js/custom-scripts.js"></script>-->
+<script>
+    $("#btn-A").on('click', function () {
+        $(".A-card").css({
+            'background-color': '#e0e0e0',
+            'box-shadow': '0 0 10px #b1b1b1',
+        });
+        $(".part").css({
+            'padding':'120px 0 0 0'
+        });
+        $(".B-card").css({
+            'background-color': 'none',
+            'box-shadow': 'none'
+        });
+        $(".C-card").css({
+            'background-color': 'none',
+            'box-shadow': 'none'
+        });
+    });
+    $("#btn-B").on('click', function () {
+        $(".B-card").css({
+            'background-color': '#e0e0e0',
+            'box-shadow': '0 0 10px #b1b1b1'
+        });
+        $(".C-card").css({
+            'background-color': 'none',
+            'box-shadow': 'none'
+        });
+        $(".A-card").css({
+            'background-color': 'none',
+            'box-shadow': 'none'
+        });
+    })
+    $("#btn-C").on('click', function () {
+        $(".B-card").css({
+            'background-color': 'none',
+            'box-shadow': 'none'
+        });
+        $(".C-card").css({
+            'background-color': '#e0e0e0',
+            'box-shadow': '0 0 10px #b1b1b1'
+        });
+        $(".A-card").css({
+            'background-color': 'none',
+            'box-shadow': 'none'
+        });
+    })
+</script>
+
+</body>
+</html>

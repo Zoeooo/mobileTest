@@ -1,0 +1,246 @@
+.project {
+    width: 18%;
+    display: block;
+    float: left;
+    margin: 1% 2% 2% 0;
+}
+
+.mobile-project {
+    display: block;
+    float: left;
+}
+
+.card {
+    position: relative;
+    height: 146px;
+}
+
+.mobile-card {
+    position: relative;
+}
+
+.card-body {
+    position: absolute;
+    width: 100%;
+    height: 146px;
+    border-radius: 6px;
+}
+
+.mobile-card-body {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    border-radius: 20%;
+}
+
+.card-small {
+    position: absolute;
+    left: 3%;
+    top: 146px;
+    width: 94%;
+    height: 8px;
+    border-radius: 0 0 6px 6px;
+}
+
+.card-smaller {
+    position: absolute;
+    left: 6.5%;
+    top: 146px;
+    width: 87%;
+    height: 16px;
+    border-radius: 0 0 6px 6px;
+}
+
+.icon-box {
+    position: absolute;
+    top: 20px;
+}
+
+.mobile-icon-box {
+    position: absolute;
+}
+
+.card-title {
+    position: absolute;
+    color: #fff;
+    left: 20px;
+    top: 115px;
+    font-weight: bold;
+}
+
+.mobile-card-title {
+    padding-top: 3px;
+    font-size: 2vw !important;
+    color: #555;
+    line-height: 18px !important;
+
+}
+.mobile-card-title-2{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    -webkit-line-clamp:2;
+}
+
+.blue {
+    background: -webkit-linear-gradient(bottom left, #76B4F2, #5D92E2);
+    background: -o-linear-gradient(bottom left, #76B4F2, #5D92E2);
+    background: -moz-linear-gradient(bottom left, #76B4F2, #5D92E2);
+    background: linear-gradient(to top right, #76B4F2, #5D92E2);
+}
+
+.green {
+    background: -webkit-linear-gradient(bottom left, #5BD7A9, #37D299);
+    background: -o-linear-gradient(bottom left, #5BD7A9, #37D299);
+    background: -moz-linear-gradient(bottom left, #5BD7A9, #37D299);
+    background: linear-gradient(to top right, #5BD7A9, #37D299);
+}
+
+.yello {
+    background: -webkit-linear-gradient(bottom left, #FED376, #EEBE56);
+    background: -o-linear-gradient(bottom left, #FED376, #EEBE56);
+    background: -moz-linear-gradient(bottom left, #FED376, #EEBE56);
+    background: linear-gradient(to top right, #FED376, #EEBE56);
+}
+
+.pink {
+    background: -webkit-linear-gradient(bottom left, #FE7E7E, #F76666);
+    background: -o-linear-gradient(bottom left, #FE7E7E, #F76666);
+    background: -moz-linear-gradient(bottom left, #FE7E7E, #F76666);
+    background: linear-gradient(to top right, #FE7E7E, #F76666);
+}
+
+.purple {
+    background: -webkit-linear-gradient(bottom left, #B5A4FF, #9B6ADF);
+    background: -o-linear-gradient(bottom left, #B5A4FF, #9B6ADF);
+    background: -moz-linear-gradient(bottom left, #B5A4FF, #9B6ADF);
+    background: linear-gradient(to top right, #B5A4FF, #9B6ADF);
+}
+
+.lightblue {
+    background: -webkit-linear-gradient(bottom left, #5CD7FA, #0BBEF1);
+    background: -o-linear-gradient(bottom left, #5CD7FA, #0BBEF1);
+    background: -moz-linear-gradient(bottom left, #5CD7FA, #0BBEF1);
+    background: linear-gradient(to top right, #5CD7FA, #0BBEF1);
+}
+
+.garyblue {
+    background: -webkit-linear-gradient(bottom left, #1F9FC3, #3FB9D9);
+    background: -o-linear-gradient(bottom left, #1F9FC3, #3FB9D9);
+    background: -moz-linear-gradient(bottom left, #1F9FC3, #3FB9D9);
+    background: linear-gradient(to top right, #1F9FC3, #3FB9D9);
+}
+
+.blue-small {
+    background-color: rgba(111, 170, 237, 0.7);
+}
+
+.green-small {
+    background-color: rgba(91, 215, 169, 0.7);
+}
+
+.yello-small {
+    background-color: rgba(254, 211, 118, 0.7);
+}
+
+.purple-small {
+    background-color: rgba(181, 164, 255, 0.7);
+}
+
+.lightblue-small {
+    background-color: rgba(92, 215, 250, 0.7);
+}
+
+.pink-small {
+    background-color: rgba(254, 126, 126, 0.7);
+}
+
+.blue-smaller {
+    background-color: rgba(111, 170, 237, 0.4);
+}
+
+.pink-smaller {
+    background-color: rgba(254, 126, 126, 0.4);
+}
+
+.green-smaller {
+    background-color: rgba(91, 215, 169, 0.4);
+}
+
+.yello-smaller {
+    background-color: rgba(254, 211, 118, 0.4);
+}
+
+.purple-smaller {
+    background-color: rgba(181, 164, 255, 0.4);
+}
+
+.lightblue-smaller {
+    background-color: rgba(92, 215, 250, 0.4);
+}
+
+.icon-bed {
+    left: 25%;
+}
+
+.icon-meet {
+    left: 30%;
+}
+
+.icon-rest {
+    left: 30%;
+}
+
+.icon-rest-mobile {
+    top: 27px;
+    left: 27px;
+}
+
+.icon-water-mobile {
+    top: 20px;
+    left: 27px;
+}
+
+.icon-meet-mobile {
+    top: 25px;
+    left: 25px;
+}
+
+.icon-book-mobile {
+    top: 25px;
+    left: 30px;
+}
+
+.icon-paper-mobile {
+    top: 25px;
+    left: 30px;
+}
+
+.icon-rests-mobile {
+    top: 28px;
+    left: 28px;
+}
+
+.icon-stay-mobile {
+    top: 25px;
+    left: 26px;
+}
+
+.icon-space-mobile {
+    top: 31px;
+    left: 23px;
+}
+
+.icon-system-mobile {
+    top: 27px;
+    left: 27px;
+}
+
+.icon-search-mobile {
+    top: 27px;
+    left: 27px;
+}
+
+.pull-r {
+    padding: 0 0 0 30px;
+}
