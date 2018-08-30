@@ -259,11 +259,11 @@
         });
         $(".B-card").css({
             'background-color': 'none',
-            'box-shadow': 'none'
+            'border':'none'
         });
         $(".C-card").css({
             'background-color': 'none',
-            'box-shadow': 'none'
+            'border':'none'
         });
     });
     $("#btn-B").on('click', function () {
@@ -273,13 +273,16 @@
         $(".B-card").css({
             'background-color': '#efefef',
             'border':'1px solid #e3e3e3',
-            'border-left':'none'
+            'border-left':'none',
+            'border-top':'none'
         });
         $(".C-card").css({
             'background-color': 'none',
+            'border':'none'
         });
         $(".A-card").css({
             'background-color': 'none',
+            'border':'none'
         });
     })
     $("#btn-C").on('click', function () {
@@ -288,14 +291,17 @@
         $("#btn-A").removeClass('active');
         $(".B-card").css({
             'background-color': 'none',
+            'border':'none'
         });
         $(".C-card").css({
             'background-color': '#efefef',
             'border':'1px solid #e3e3e3',
-            'border-left':'none'
+            'border-left':'none',
+            'border-top':'none'
         });
         $(".A-card").css({
             'background-color': 'none',
+            'border':'none'
         });
     })
 </script>
