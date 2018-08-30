@@ -95,9 +95,9 @@
         }
 
         .card {
-            margin: 3% 0;
+            margin: 0;
+            padding: 5% 5px;
             height: auto;
-            padding: 5px;
         }
 
         .card .obj-title {
@@ -248,8 +248,7 @@
         $("#btn-B").removeClass('active');
         $("#btn-C").removeClass('active');
         $(".A-card").css({
-            'background-color': '#fafafa',
-            'box-shadow': '0 0 10px #e3e3e3'
+            'background-color': '#f0f0f0'
         });
         $(".part").css({
             'padding':'120px 0 0 0'
@@ -268,16 +267,13 @@
         $("#btn-A").removeClass('active');
         $("#btn-C").removeClass('active');
         $(".B-card").css({
-            'background-color': '#fafafa',
-            'box-shadow': '0 0 10px #e3e3e3'
+            'background-color': '#f0f0f0'
         });
         $(".C-card").css({
             'background-color': 'none',
-            'box-shadow': 'none'
         });
         $(".A-card").css({
             'background-color': 'none',
-            'box-shadow': 'none'
         });
     })
     $("#btn-C").on('click', function () {
@@ -286,15 +282,12 @@
         $("#btn-A").removeClass('active');
         $(".B-card").css({
             'background-color': 'none',
-            'box-shadow': 'none'
         });
         $(".C-card").css({
-            'background-color': '#fafafa',
-            'box-shadow': '0 0 10px #e3e3e3'
+            'background-color': '#f0f0f0'
         });
         $(".A-card").css({
             'background-color': 'none',
-            'box-shadow': 'none'
         });
     })
 </script>
