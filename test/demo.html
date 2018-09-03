@@ -11,15 +11,16 @@
     <!-- Custom Styles-->
     <link href="assets/css/custom-styles.css" rel="stylesheet"/>
     <!-- Google Fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="assets/css/cardComponent.css">
+    <script src="assets/js/jquery-1.10.2.js"></script>
 
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        html{
+
+        html {
             height: 100%;
         }
 
@@ -53,7 +54,8 @@
             padding: 0;
             margin: 0;
         }
-        #page-wrap{
+
+        #page-wrap {
             height: 100%;
         }
 
@@ -62,7 +64,8 @@
             margin: 0 0 0 25%;
             height: 100%;
         }
-        .inne{
+
+        .inne {
             position: absolute;
             top: 0px;
             height: 100%;
@@ -89,10 +92,11 @@
             margin: 3% auto 5%;
             border-radius: 50%;
         }
-        .obj img{
+
+        .obj img {
             width: 27px;
             height: auto;
-            margin:13px;
+            margin: 13px;
         }
 
         .card {
@@ -115,16 +119,14 @@
         .key {
             width: 100%;
             height: 47px;
-            background-color:#fafafa;
-            /*border-right: 1px solid #eee;*/
-            /*border-bottom: 1px solid #eee;*/
+            background-color: #fafafa;
+
         }
 
         .key a {
             width: 100%;
             color: #333;
             font-weight: normal;
-            /*padding: 0 1%;*/
             height: 47px;
             line-height: 47px;
             display: block;
@@ -135,36 +137,86 @@
 
         .A-card {
         }
-        .active{
-            border-left:2px solid #0BBEF1;
+
+        .active {
+            border-left: 2px solid #0BBEF1;
             background-color: #fff;
-            color: #0BBEF1!important;
-            border-right: none!important;
+            color: #0BBEF1 !important;
+            border-right: none !important;
+        }
+
+        .groupA .A-card, .groupB .B-card,
+        .groupC .C-card, .groupD .D-card,
+        .groupE .E-card, .groupF .F-card,
+        .groupG .G-card, .groupH .H-card,
+        .groupL .L-card {
+            background-color: #f00;
         }
     </style>
+    <script>
+        function x(id) {
+            return document.getElementById(id)
+        }
+        $(function () {
+            var ullis = x("ul").getElementsByClassName("card");
+            console.log(ullis);
+            var ollis = x("ol").getElementsByTagName("div");
+            console.log(ollis);
+            var leader = 0,target = 0,timer = null;
+            for(var i=0; i<ullis.length;i++){
+                ollis[i].index = i;
+                ollis[i].onclick = function () {
+                    target = ullis[this.index].offsetTop;
+                    timer = setInterval(function () {
+                        leader = leader + (target-leader)/10;
+                        window.scrollTo(0,leader-150);
+                    },35)
+                }
+            }
+        })
+
+        //        window.onload = function () {
+        //            var ullis = x("ul").getElementsByClassName("card");
+        //            console.log(ullis);
+        //            var ollis = x("ol").getElementsByTagName("div");
+        //            console.log(ollis);
+        //            var leader = 0,target = 0,timer = null;
+        //            for(var i=0; i<ullis.length;i++){
+        //                ollis[i].index = i;
+        //                ollis[i].onclick = function () {
+        //                    target = ullis[this.index].offsetTop;
+        //                    timer = setInterval(function () {
+        //                        leader = leader + (target-leader)/10;
+        //                        window.scrollTo(0,leader-150);
+        //                    },35)
+        //                }
+        //            }
+        //        }
+    </script>
 </head>
 <body>
 <div id="wrap">
-    <nav class="top">
-    </nav>
-    <nav class="side">
-        <div class="key"><a id="btn-A" href="#A" style=" border-top: 1px solid #e3e3e3;">财务处</a></div>
-        <div class="key"><a id="btn-B" href="#B">国际交流学院</a></div>
-        <div class="key"><a id="btn-C" href="#C">计算机学院</a></div>
-        <div class="key"><a id="btn-D" class="" href="#A">财务处</a></div>
-        <div class="key"><a id="btn-E" href="#B">国际交流学院</a></div>
-        <div class="key"><a id="btn-F" href="#C">计算机学院</a></div>
-        <div class="key"><a id="btn-G" href="#A">财务处</a></div>
-        <div class="key"><a id="btn-H" href="#B">国际交流学院</a></div>
-        <div class="key"><a id="btn-I" href="#C">计算机学院</a></div>
-        <div class="key"><a id="btn-J" class="" href="#A">财务处</a></div>
-        <div class="key"><a id="btn-k" href="#B">国际交流学院</a></div>
+    <!--<nav class="top">-->
+    <!--</nav>-->
+    <nav id="ol" class="side">
+        <div class="key" onclick="change('groupA')"><a id="btn-A" href="#A"
+                                                       style=" border-top: 1px solid #e3e3e3;">财务处</a></div>
+        <div class="key" onclick="change('groupB')"><a id="btn-B" href="#B">国际交流学院</a></div>
+        <div class="key" onclick="change('groupC')"><a id="btn-C" href="#C">经济管理中心</a></div>
+        <div class="key" onclick="change('groupD')"><a id="btn-D" href="#D">教务处</a></div>
+        <div class="key" onclick="change('groupE')"><a id="btn-E" href="#E">后勤处</a></div>
+        <div class="key" onclick="change('groupF')"><a id="btn-F" href="#G">计算机学院</a></div>
+        <div class="key" onclick="change('groupG')"><a id="btn-G" href="#J">财务处</a></div>
+        <div class="key" onclick="change('groupH')"><a id="btn-H" href="#K">国际交流学院</a></div>
+        <div class="key" onclick="change('groupJ')"><a id="btn-I" href="#L">计算机学院</a></div>
+        <div class="key" onclick="change('groupK')"><a id="btn-J" href="#N">财务处</a></div>
+        <div class="key" onclick="change('groupL')"><a id="btn-k" href="#N">国际交流学院</a></div>
     </nav>
     <div id="page-wrap">
         <div id="page-inne">
-            <div class="inne">
-                <div id="A" class="col-xs-12 part">
-                    <div id="B" class="col-xs-4 card A-card" style=" border-top: 1px solid red inset;">
+            <div id="main" class="inne">
+                <div id="ul" class="col-xs-12 part">
+                    <div class="col-xs-4 card A-card">
                         <div class="pink obj"><img src="img/mobile-meet.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
@@ -184,112 +236,68 @@
                         <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card B-card">
+                    <div class="col-xs-4 card C-card">
                         <div class="purple obj"><img src="img/mobile-system.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card B-card">
+                    <div class="col-xs-4 card C-card">
                         <div class="pink obj"><img src="img/mobile-search.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card B-card">
+                    <div class="col-xs-4 card C-card">
                         <div class="blue obj"><img src="img/mobile-space.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card B-card">
+                    <div class="col-xs-4 card D-card">
                         <div class="pink obj"><img src="img/mobile-paper.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div id="C" class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card D-card">
                         <div class="blue obj"><img src="img/mobile-water.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card E-card">
                         <div class="yello obj"><img src="img/mobile-book.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card E-card">
                         <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card F-card">
                         <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card F-card">
                         <div class="purple obj"><img src="img/mobile-search.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card G-card">
                         <div class="pink obj"><img src="img/mobile-building.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
-                    <div class="col-xs-4 card C-card">
+                    <div class="col-xs-4 card H-card">
                         <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-<!-- JS Scripts-->
-<!-- jQuery Js -->
-<script src="assets/js/jquery-1.10.2.js"></script>
-<!-- Bootstrap Js -->
 <script src="assets/js/bootstrap.min.js"></script>
-<!--&lt;!&ndash; Metis Menu Js &ndash;&gt;-->
-<!--<script src="assets/js/jquery.metisMenu.js"></script>-->
-<!--&lt;!&ndash; Custom Js &ndash;&gt;-->
-<!--<script src="assets/js/custom-scripts.js"></script>-->
 <script>
-    $("#btn-A").on('click', function () {
-        $("#btn-A").addClass('active');
-        $("#btn-B").removeClass('active');
-        $("#btn-C").removeClass('active');
-        $(".A-card").css({
-            'background-color': '#efefef'
-        });
-        $(".part").css({
-            'padding':'150px 0 0 0'
-        });
-        $(".B-card").css({
-            'background-color': 'none'
-        });
-        $(".C-card").css({
-            'background-color': 'none'
-        });
+    const child = $('#main');
+    $(function () {
+        let $mom = $('.key a');
+        $mom.click(function () {
+            $mom.removeClass('active');
+            $(this).addClass('active');
+        })
     });
-    $("#btn-B").on('click', function () {
-        $("#btn-B").addClass('active');
-        $("#btn-A").removeClass('active');
-        $("#btn-C").removeClass('active');
-        $(".B-card").css({
-            'background-color': '#efefef'
-        });
-        $(".C-card").css({
-            'background-color': 'none'
-        });
-        $(".A-card").css({
-            'background-color': 'none'
-        });
-    })
-    $("#btn-C").on('click', function () {
-        $("#btn-C").addClass('active');
-        $("#btn-B").removeClass('active');
-        $("#btn-A").removeClass('active');
-        $(".B-card").css({
-            'background-color': 'none'
-        });
-        $(".C-card").css({
-            'background-color': '#efefef'
-        });
-        $(".A-card").css({
-            'background-color': 'none'
-        });
-    })
+    function change(className) {
+        child.removeClass().addClass(className);
+    }
 </script>
-
 </body>
 </html>

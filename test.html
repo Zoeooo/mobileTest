@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        #A{
+            width: 100%;
+            height: 100%;
+        }
+        #A div{
+            width: 100%;
+            height: 70%;
+        }
+        #B{
+            position:fixed;
+            top: 100px;
+            right: 0;
+        }
+        #B div{
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="A">
+    <div class="AAA">1</div>
+    <div class="AAA">2</div>
+    <div class="AAA">3</div>
+    <div class="AAA">4</div>
+    <div class="AAA">5</div>
+</div>
+<ol id="B">
+    <div class="AAA">1</div>
+    <div class="AAA">2</div>
+    <div class="AAA">3</div>
+    <div class="AAA">4</div>
+    <div class="AAA">5</div>
+</ol>
+<script src="test/assets/js/jquery-1.10.2.js"></script>
+//js实现缓动效果
+<script>
+    function x(id) {
+        return document.getElementById(id)
+    }
+
+    $(function () {
+        var ullis = x("A").getElementsByClassName("AAA");
+        console.log(ullis);
+        var ollis = x("B").getElementsByTagName("div");
+        var colors = ["yellow","red","blue","orange","green"];
+        var leader = 0,target = 0,timer = null;
+        for(var i=0; i<ullis.length;i++){
+            ullis[i].style.backgroundColor = colors[i];
+            ollis[i].style.backgroundColor = colors[i];
+            ollis[i].index = i;
+            ollis[i].onclick = function () {
+                target = ullis[this.index].offsetTop;
+                timer = setInterval(function () {
+                    leader = leader + (target-leader)/10;
+                    window.scrollTo(0,leader-150);
+                },35)
+            }
+        }
+    })
+</script>
+</body>
+</html>
