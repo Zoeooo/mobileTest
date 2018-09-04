@@ -61,25 +61,25 @@
         return document.getElementById(id)
     }
 
-    $(function () {
-        var ullis = x("A").getElementsByClassName("AAA");
-        console.log(ullis);
-        var ollis = x("B").getElementsByTagName("div");
-        var colors = ["yellow","red","blue","orange","green"];
-        var leader = 0,target = 0,timer = null;
-        for(var i=0; i<ullis.length;i++){
-            ullis[i].style.backgroundColor = colors[i];
-            ollis[i].style.backgroundColor = colors[i];
-            ollis[i].index = i;
-            ollis[i].onclick = function () {
-                target = ullis[this.index].offsetTop;
-                timer = setInterval(function () {
-                    leader = leader + (target-leader)/10;
-                    window.scrollTo(0,leader-150);
-                },35)
-            }
-        }
-    })
+//    $(function () {
+//        var ullis = x("A").getElementsByClassName("AAA");
+//        console.log(ullis);
+//        var ollis = x("B").getElementsByTagName("div");
+//        var colors = ["yellow","red","blue","orange","green"];
+//        var leader = 0,target = 0,timer = null;
+//        for(var i=0; i<ullis.length;i++){
+//            ullis[i].style.backgroundColor = colors[i];
+//            ollis[i].style.backgroundColor = colors[i];
+//            ollis[i].index = i;
+//            ollis[i].onclick = function () {
+//                target = ullis[this.index].offsetTop;
+//                timer = setInterval(function () {
+//                    leader = leader + (target-leader)/10;
+//                    window.scrollTo(0,leader-150);
+//                },35)
+//            }
+//        }
+//    })
 </script>
 </body>
 </html>
