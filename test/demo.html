@@ -18,6 +18,13 @@
         * {
             margin: 0;
             padding: 0;
+            scrollbar-3dlight-color: #fff;
+            scrollbar-highlight-color: #fff;
+            scrollbar-arrow-color: #fff;
+            scrollbar-shadow-color: #fff;
+            scrollbar-darkshadow-color: #fff;
+            scrollbar-base-color: #fff;
+            scrollbar-track-color: #fff;
         }
 
         html {
@@ -41,10 +48,11 @@
 
         .side {
             width: 25%;
-            height: 100%;
+            /*height: 100%;*/
             position: fixed;
             top: 150px;
             background-color: #fff;
+            overflow-y: scroll;
         }
 
         #wrap {
@@ -116,6 +124,10 @@
             -webkit-line-clamp: 2;
         }
 
+        .box {
+            overflow: hidden;
+        }
+
         .key {
             width: 100%;
             height: 47px;
@@ -162,15 +174,15 @@
             <!--console.log(ullis);-->
             <!--var ollis = x("ol").getElementsByTagName("div");-->
             <!--console.log(ollis);-->
-            <!--var leader = 0,target = 0,timer = null;-->
-            <!--for(var i=0; i<ullis.length;i++){-->
+            <!--var leader = 0, target = 0, timer = null;-->
+            <!--for (var i = 0; i < ullis.length; i++) {-->
                 <!--ollis[i].index = i;-->
                 <!--ollis[i].onclick = function () {-->
                     <!--target = ullis[this.index].offsetTop;-->
                     <!--timer = setInterval(function () {-->
-                        <!--leader = leader + (target-leader)/10;-->
-                        <!--window.scrollTo(0,leader-150);-->
-                    <!--},35)-->
+                        <!--leader = leader + (target - leader) / 10;-->
+                        <!--window.scrollTo(0, leader - 150);-->
+                    <!--}, 35)-->
                 <!--}-->
             <!--}-->
         <!--})-->
@@ -196,22 +208,24 @@
 </head>
 <body>
 <div id="wrap">
-    <!--<nav class="top">-->
-    <!--</nav>-->
-    <nav id="ol" class="side">
-        <div class="key" onclick="change('groupA')"><a id="btn-A" href="#A"
-                                                       style=" border-top: 1px solid #e3e3e3;">财务处</a></div>
-        <div class="key" onclick="change('groupB')"><a id="btn-B" href="#B">国际交流学院</a></div>
-        <div class="key" onclick="change('groupC')"><a id="btn-C" href="#C">经济管理中心</a></div>
-        <div class="key" onclick="change('groupD')"><a id="btn-D" href="#D">教务处</a></div>
-        <div class="key" onclick="change('groupE')"><a id="btn-E" href="#E">后勤处</a></div>
-        <div class="key" onclick="change('groupF')"><a id="btn-F" href="#G">计算机学院</a></div>
-        <div class="key" onclick="change('groupG')"><a id="btn-G" href="#J">财务处</a></div>
-        <div class="key" onclick="change('groupH')"><a id="btn-H" href="#K">国际交流学院</a></div>
-        <div class="key" onclick="change('groupJ')"><a id="btn-I" href="#L">计算机学院</a></div>
-        <div class="key" onclick="change('groupK')"><a id="btn-J" href="#N">财务处</a></div>
-        <div class="key" onclick="change('groupL')"><a id="btn-k" href="#N">国际交流学院</a></div>
+    <nav class="top">
     </nav>
+    <div class="box">
+        <nav id="ol" class="side">
+            <div class="key" onclick="change('groupA')"><a id="btn-A" href="#A"
+                                                           style=" border-top: 1px solid #e3e3e3;">财务处</a></div>
+            <div class="key" onclick="change('groupB')"><a id="btn-B" href="#B">国际交流学院</a></div>
+            <div class="key" onclick="change('groupC')"><a id="btn-C" href="#C">经济管理中心</a></div>
+            <div class="key" onclick="change('groupD')"><a id="btn-D" href="#D">教务处</a></div>
+            <div class="key" onclick="change('groupE')"><a id="btn-E" href="#E">后勤处</a></div>
+            <div class="key" onclick="change('groupF')"><a id="btn-F" href="#G">计算机学院</a></div>
+            <div class="key" onclick="change('groupG')"><a id="btn-G" href="#J">财务处</a></div>
+            <div class="key" onclick="change('groupH')"><a id="btn-H" href="#K">国际交流学院</a></div>
+            <div class="key" onclick="change('groupJ')"><a id="btn-I" href="#L">计算机学院</a></div>
+            <div class="key" onclick="change('groupK')"><a id="btn-J" href="#N">财务处</a></div>
+            <div class="key" onclick="change('groupL')"><a id="btn-k" href="#N">国际交流学院</a></div>
+        </nav>
+    </div>
     <div id="page-wrap">
         <div id="page-inne">
             <div id="main" class="inne">
