@@ -153,46 +153,46 @@
             background-color: #f00;
         }
     </style>
-    <script>
-        function x(id) {
-            return document.getElementById(id)
-        }
-        $(function () {
-            var ullis = x("ul").getElementsByClassName("card");
-            console.log(ullis);
-            var ollis = x("ol").getElementsByTagName("div");
-            console.log(ollis);
-            var leader = 0,target = 0,timer = null;
-            for(var i=0; i<ullis.length;i++){
-                ollis[i].index = i;
-                ollis[i].onclick = function () {
-                    target = ullis[this.index].offsetTop;
-                    timer = setInterval(function () {
-                        leader = leader + (target-leader)/10;
-                        window.scrollTo(0,leader-150);
-                    },35)
-                }
-            }
-        })
+    <!--<script>-->
+        <!--function x(id) {-->
+            <!--return document.getElementById(id)-->
+        <!--}-->
+        <!--$(function () {-->
+            <!--var ullis = x("ul").getElementsByClassName("card");-->
+            <!--console.log(ullis);-->
+            <!--var ollis = x("ol").getElementsByTagName("div");-->
+            <!--console.log(ollis);-->
+            <!--var leader = 0,target = 0,timer = null;-->
+            <!--for(var i=0; i<ullis.length;i++){-->
+                <!--ollis[i].index = i;-->
+                <!--ollis[i].onclick = function () {-->
+                    <!--target = ullis[this.index].offsetTop;-->
+                    <!--timer = setInterval(function () {-->
+                        <!--leader = leader + (target-leader)/10;-->
+                        <!--window.scrollTo(0,leader-150);-->
+                    <!--},35)-->
+                <!--}-->
+            <!--}-->
+        <!--})-->
 
-        //        window.onload = function () {
-        //            var ullis = x("ul").getElementsByClassName("card");
-        //            console.log(ullis);
-        //            var ollis = x("ol").getElementsByTagName("div");
-        //            console.log(ollis);
-        //            var leader = 0,target = 0,timer = null;
-        //            for(var i=0; i<ullis.length;i++){
-        //                ollis[i].index = i;
-        //                ollis[i].onclick = function () {
-        //                    target = ullis[this.index].offsetTop;
-        //                    timer = setInterval(function () {
-        //                        leader = leader + (target-leader)/10;
-        //                        window.scrollTo(0,leader-150);
-        //                    },35)
-        //                }
-        //            }
-        //        }
-    </script>
+        <!--//        window.onload = function () {-->
+        <!--//            var ullis = x("ul").getElementsByClassName("card");-->
+        <!--//            console.log(ullis);-->
+        <!--//            var ollis = x("ol").getElementsByTagName("div");-->
+        <!--//            console.log(ollis);-->
+        <!--//            var leader = 0,target = 0,timer = null;-->
+        <!--//            for(var i=0; i<ullis.length;i++){-->
+        <!--//                ollis[i].index = i;-->
+        <!--//                ollis[i].onclick = function () {-->
+        <!--//                    target = ullis[this.index].offsetTop;-->
+        <!--//                    timer = setInterval(function () {-->
+        <!--//                        leader = leader + (target-leader)/10;-->
+        <!--//                        window.scrollTo(0,leader-150);-->
+        <!--//                    },35)-->
+        <!--//                }-->
+        <!--//            }-->
+        <!--//        }-->
+    <!--</script>-->
 </head>
 <body>
 <div id="wrap">
