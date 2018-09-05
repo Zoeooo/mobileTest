@@ -9,10 +9,12 @@
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom Styles-->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link href="assets/css/custom-styles.css" rel="stylesheet"/>
     <!-- Google Fonts-->
     <link rel="stylesheet" href="assets/css/cardComponent.css">
     <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
 
     <style>
         * {
@@ -67,7 +69,7 @@
             height: 100%;
         }
 
-        #page-inne {
+        #main-wrapper {
             top: 150px;
             margin: 0 0 0 25%;
             height: 100%;
@@ -77,14 +79,13 @@
             position: absolute;
             top: 0px;
             height: 100%;
-            background-color: #1F1F1F;
+            /*background-color: #1F1F1F;*/
         }
 
         .part {
             position: static;
             background-color: #fff;
             padding: 150px 0 0 0;
-            overflow-y: scroll;
         }
 
         .head {
@@ -161,141 +162,121 @@
         .groupE .E-card, .groupF .F-card,
         .groupG .G-card, .groupH .H-card,
         .groupL .L-card {
-            background-color: #efefef;
+            background-color: #f00;
         }
     </style>
-    <!--<script>-->
-    <!--function x(id) {-->
-    <!--return document.getElementById(id)-->
-    <!--}-->
-    <!--$(function () {-->
-    <!--var ullis = x("ul").getElementsByClassName("card");-->
-    <!--console.log(ullis);-->
-    <!--var ollis = x("ol").getElementsByTagName("div");-->
-    <!--console.log(ollis);-->
-    <!--var leader = 0, target = 0, timer = null;-->
-    <!--for (var i = 0; i < ullis.length; i++) {-->
-    <!--ollis[i].index = i;-->
-    <!--ollis[i].onclick = function () {-->
-    <!--target = ullis[this.index].offsetTop;-->
-    <!--timer = setInterval(function () {-->
-    <!--leader = leader + (target - leader) / 10;-->
-    <!--window.scrollTo(0, leader - 150);-->
-    <!--}, 35)-->
-    <!--}-->
-    <!--}-->
-    <!--})-->
-
-    <!--//        window.onload = function () {-->
-    <!--//            var ullis = x("ul").getElementsByClassName("card");-->
-    <!--//            console.log(ullis);-->
-    <!--//            var ollis = x("ol").getElementsByTagName("div");-->
-    <!--//            console.log(ollis);-->
-    <!--//            var leader = 0,target = 0,timer = null;-->
-    <!--//            for(var i=0; i<ullis.length;i++){-->
-    <!--//                ollis[i].index = i;-->
-    <!--//                ollis[i].onclick = function () {-->
-    <!--//                    target = ullis[this.index].offsetTop;-->
-    <!--//                    timer = setInterval(function () {-->
-    <!--//                        leader = leader + (target-leader)/10;-->
-    <!--//                        window.scrollTo(0,leader-150);-->
-    <!--//                    },35)-->
-    <!--//                }-->
-    <!--//            }-->
-    <!--//        }-->
-    <!--</script>-->
 </head>
 <body>
 <div id="wrap">
     <nav class="top">
     </nav>
-    <nav id="ol" class="side">
-        <div class="key" onclick="change('groupA')"><a id="btn-A" href="#A"
-                                                       style=" border-top: 1px solid #e3e3e3;">财务处</a></div>
-        <div class="key" onclick="change('groupB')"><a id="btn-B" href="#B">国际交流学院</a></div>
-        <div class="key" onclick="change('groupC')"><a id="btn-C" href="#C">经济管理中心</a></div>
-        <div class="key" onclick="change('groupD')"><a id="btn-D" href="#D">教务处</a></div>
-        <div class="key" onclick="change('groupE')"><a id="btn-E" href="#E">后勤处</a></div>
-        <div class="key" onclick="change('groupF')"><a id="btn-F" href="#G">计算机学院</a></div>
-        <div class="key" onclick="change('groupG')"><a id="btn-G" href="#J">财务处</a></div>
-        <div class="key" onclick="change('groupH')"><a id="btn-H" href="#K">国际交流学院</a></div>
-        <div class="key" onclick="change('groupJ')"><a id="btn-I" href="#L">计算机学院</a></div>
-        <div class="key" onclick="change('groupK')"><a id="btn-J" href="#N">财务处</a></div>
-        <div class="key" onclick="change('groupL')"><a id="btn-k" href="#N">国际交流学院</a></div>
-        <div class="key" onclick="change('groupF')"><a id="btn-L" href="#G">计算机学院</a></div>
-        <div class="key" onclick="change('groupG')"><a id="btn-M" href="#J">财务处</a></div>
-        <div class="key" onclick="change('groupH')"><a id="btn-N" href="#K">国际交流学院</a></div>
-        <div class="key" onclick="change('groupJ')"><a id="btn-O" href="#L">计算机学院</a></div>
-        <div class="key" onclick="change('groupK')"><a id="btn-P" href="#N">财务处</a></div>
-        <div class="key" onclick="change('groupL')"><a id="btn-Q" href="#N">国际交流学院</a></div>
+    <nav id="menu" class="side swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="key" onclick="change('groupA')"><a id="btn-A" href="#A"
+                                                               style=" border-top: 1px solid #e3e3e3;">财务处</a></div>
+                <div class="key" onclick="change('groupB')"><a id="btn-B" href="#B">国际交流学院</a></div>
+                <div class="key" onclick="change('groupC')"><a id="btn-C" href="#C">经济管理中心</a></div>
+                <div class="key" onclick="change('groupD')"><a id="btn-D" href="#D">教务处</a></div>
+                <div class="key" onclick="change('groupE')"><a id="btn-E" href="#E">后勤处</a></div>
+                <div class="key" onclick="change('groupF')"><a id="btn-F" href="#G">计算机学院</a></div>
+                <div class="key" onclick="change('groupG')"><a id="btn-G" href="#J">财务处</a></div>
+                <div class="key" onclick="change('groupH')"><a id="btn-H" href="#K">国际交流学院</a></div>
+                <div class="key" onclick="change('groupJ')"><a id="btn-I" href="#L">计算机学院</a></div>
+                <div class="key" onclick="change('groupK')"><a id="btn-J" href="#N">财务处</a></div>
+                <div class="key" onclick="change('groupL')"><a id="btn-k" href="#N">国际交流学院</a></div>
+                <div class="key" onclick="change('groupF')"><a id="btn-L" href="#G">计算机学院</a></div>
+                <div class="key" onclick="change('groupG')"><a id="btn-M" href="#J">财务处</a></div>
+                <div class="key" onclick="change('groupH')"><a id="btn-N" href="#K">国际交流学院</a></div>
+                <div class="key" onclick="change('groupJ')"><a id="btn-O" href="#L">计算机学院</a></div>
+                <div class="key" onclick="change('groupK')"><a id="btn-P" href="#N">财务处</a></div>
+                <div class="key" onclick="change('groupL')"><a id="btn-Q" href="#N">国际交流学院</a></div>
+            </div>
+        </div>
     </nav>
     <div id="page-wrap">
-        <div id="page-inne">
-            <div id="main" class="inne">
-                <div id="ul" class="col-xs-12 part">
-                    <div class="col-xs-4 card A-card">
-                        <div class="pink obj"><img src="img/mobile-meet.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card A-card">
-                        <div class="blue obj"><img src="img/mobile-book.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card A-card">
-                        <div class="yello obj"><img src="img/mobile-building.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card A-card">
-                        <div class="blue obj"><img src="img/mobile-rest.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card B-card">
-                        <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card C-card">
-                        <div class="purple obj"><img src="img/mobile-system.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card C-card">
-                        <div class="pink obj"><img src="img/mobile-search.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card C-card">
-                        <div class="blue obj"><img src="img/mobile-space.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card D-card">
-                        <div class="pink obj"><img src="img/mobile-paper.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card D-card">
-                        <div class="blue obj"><img src="img/mobile-water.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card E-card">
-                        <div class="yello obj"><img src="img/mobile-book.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card E-card">
-                        <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card F-card">
-                        <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card F-card">
-                        <div class="purple obj"><img src="img/mobile-search.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card G-card">
-                        <div class="pink obj"><img src="img/mobile-building.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
-                    </div>
-                    <div class="col-xs-4 card H-card">
-                        <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
-                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+        <div id="main-wrapper" class="main-wrapper">
+            <div id="main" class="inne swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div id="part" class="part">
+                            <div class="col-xs-12 main_list">
+                                <div class="col-xs-4 card A-card">
+                                    <div class="pink obj"><img src="img/mobile-meet.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card A-card">
+                                    <div class="blue obj"><img src="img/mobile-book.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card A-card">
+                                    <div class="yello obj"><img src="img/mobile-building.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 main_list">
+                                <div class="col-xs-4 card A-card">
+                                    <div class="blue obj"><img src="img/mobile-rest.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card B-card">
+                                    <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card C-card">
+                                    <div class="purple obj"><img src="img/mobile-system.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 main_list">
+                                <div class="col-xs-4 card C-card">
+                                    <div class="pink obj"><img src="img/mobile-search.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card C-card">
+                                    <div class="blue obj"><img src="img/mobile-space.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card D-card">
+                                    <div class="pink obj"><img src="img/mobile-paper.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 main_list">
+                                <div class="col-xs-4 card D-card">
+                                    <div class="blue obj"><img src="img/mobile-water.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card E-card">
+                                    <div class="yello obj"><img src="img/mobile-book.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card E-card">
+                                    <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 main_list">
+                                <div class="col-xs-4 card F-card">
+                                    <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card F-card">
+                                    <div class="purple obj"><img src="img/mobile-search.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                                <div class="col-xs-4 card G-card">
+                                    <div class="pink obj"><img src="img/mobile-building.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 main_list">
+                                <div class="col-xs-4 card H-card">
+                                    <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
+                                    <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -303,15 +284,99 @@
     </div>
 </div>
 <script src="assets/js/bootstrap.min.js"></script>
-<script>
-    const child = $('#main');
-    $(function () {
-        let $mom = $('.key a');
-        $mom.click(function () {
-            $mom.removeClass('active');
-            $(this).addClass('active');
+<script type="text/javascript">
+    var swipermuen = new Swiper('#muen', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true
+    });
+    var swipermain = new Swiper('#main', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        on: {
+            // 监听内容滑动区域scrollY,过度结束时
+            transitionEnd: function () {
+                var active_scrollY = (scrollY.css("transform").replace(/[^0-9\-\.,]/g, '').split(',')[5]);
+                for (var i = 0; i < main_list_len; i++) {
+                    if (active_scrollY <= tabs_MAIN_H_list[i] && active_scrollY > tabs_MAIN_H_list[i + 1]) {
+                        let newindex = i + 1;
+                        tabs.removeClass('active');
+                        tabs.eq(newindex).addClass('active');
+                        //console.log(active_scrollY)
+                        //console.log(tabs.eq(newindex).text())
+                        fix_title.html(tabs.eq(newindex).text());
+                    }
+                    if (active_scrollY > tabs_MAIN_H_list[0]) {
+                        tabs.removeClass('active');
+                        tabs.eq(0).addClass('active');
+                        fix_title.css("display", "block");
+                        fix_title.html("巴黎时装学院");
+                        //console.log(active_scrollY)
+                        //fix_title.css("display","none");
+                    }
+                }
+            },
+            touchMove: function (event) {
+                var active_scrollY = (scrollY.css("transform").replace(/[^0-9\-\.,]/g, '').split(',')[5]);
+                // console.log(active_scrollY)
+                if (active_scrollY > 0) {
+                    fix_title.css("display", "none");
+                }
+            }
+        }
+    });
+
+    var MAIN_H_list = [];
+    var tabs_MAIN_H_list = [];
+    var main_list_len = $(".main_list").length;
+    console.log(main_list_len);
+    var tabs = $(".key a");
+    var scrollY = $(".main-wrapper .swiper-wrapper");
+    var H = 0;
+    var fix_title = $(".title_fix")
+
+    for (var i = 0; i < main_list_len; i++) {
+        // 加上marginButtom的边距
+        var list = -($(".card").eq(i).height() + 10);
+        MAIN_H_list.push(list);
+    }
+
+    for (var i = 0; i < main_list_len; i++) {
+        var tab_H_ITEM = MAIN_H_list[i];
+        H += tab_H_ITEM;
+        tabs_MAIN_H_list.push(H);
+    }
+
+    tabs.click(function () {
+        tabs.removeClass("active");
+        $(this).addClass("active");
+        // 获取当前点击的index
+        var index = $(this).index();
+        var indexActive = 0;
+        for (var i = 0; i < index; i++) {
+            indexActive += MAIN_H_list[i];
+        }
+        indexActive = indexActive + 'px';
+        // console.log(indexActive);
+        // 每次点击首先清除SWIPER原先添加样式
+        scrollY.removeAttr("style");
+        scrollY.animate({}, function () {
+            scrollY.css({"transform": "translate3d(0px, " + indexActive + " , 0px)"});
+            fix_title.html($(".menu-wrapper li span").eq(index).text());
+            // console.log($(".menu-wrapper li span").eq(index).text());
         })
     });
+</script>
+<script>
+    const child = $('#main');
+    //    $(function () {
+    //        let $mom = $('.key a');
+    //        $mom.click(function () {
+    //            $mom.removeClass('active');
+    //            $(this).addClass('active');
+    //        })
+    //    });
     function change(className) {
         child.removeClass().addClass(className);
     }

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mobile</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <script type="text/javascript" src="assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="assets/css/cardComponent.css">
+    <style type="text/css">
+        header {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            background: -webkit-linear-gradient(left top, #61bad4, #1c9dc2); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right, #61bad4, #1c9dc2); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right, #61bad4, #1c9dc2); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, #61bad4, #1c9dc2); /* 标准的语法 */
+            box-shadow: 1px 1px 15px #a7ebff;
+        }
+
+        .content-wrapper {
+            position: relative;
+            padding: 24px 12px 30px 24px;
+            font-size: 0;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .content {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 16px;
+        }
+
+        .title {
+            margin: 2px 0 8px 0;
+        }
+
+        .name {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: bold;
+        }
+
+        .passname, .tel {
+            margin-bottom: 8px;
+            line-height: 12px;
+            font-size: 12px;
+        }
+
+        .operate {
+            font-size: 14px;
+            display: flex;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            position: relative;
+            margin: 0 24px;
+            margin-top: -15px;
+            box-shadow: 1px 1px 5px #bdbdbd;
+            border-radius: 30px;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .operate span {
+            flex: 1;
+        }
+
+        .operate p {
+            color: #b5b5b5;
+        }
+
+        .operate span span {
+            top: 2px;
+            margin-right: 5px;
+        }
+
+        .depart {
+            position: absolute;
+            top: 155px;
+            bottom: 0px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .depart_sign {
+            border-bottom: 1px solid #eee;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        .depart_sign span {
+            display: block;
+            width: 30px;
+            border-bottom: 2px solid #1c9dc2;
+        }
+
+        .depart-wrapper {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .menu-wrapper {
+            flex: 0 0 80px;
+            width: 80px;
+            background: #f3f5f7;
+            height: 100%;
+        }
+
+        .menu-wrapper ul {
+            padding: 0;
+        }
+
+        .menu-item {
+            display: table;
+            height: 54px;
+            width: 80px;
+            padding: 0 12px;
+            line-height: 14px;
+        }
+        .active {
+            border-left: 2px solid #0BBEF1;
+            color: #0BBEF1 !important;
+            border-right: none !important;
+            position: relative;
+            z-index: 10;
+            margin-top: -1px;
+            background: #fff;
+            font-weight: 700;
+        }
+        /*.active {*/
+            /*position: relative;*/
+            /*z-index: 10;*/
+            /*margin-top: -1px;*/
+            /*background: #fff;*/
+            /*font-weight: 700;*/
+        /*}*/
+
+        .text {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .text:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid rgba(7, 17, 27, 0.1);
+            content: ' '
+        }
+
+        .active .text:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border-top: none;
+            content: ' '
+        }
+
+        .main-wrapper {
+            flex: 1;
+        }
+
+        .main-wrapper ul {
+            padding: 0;
+            list-style: none;
+            /*margin-bottom: 18px;*/
+        }
+
+        .main-wrapper ul .title {
+            margin-top: 0px;
+            padding-left: 14px;
+            height: 26px;
+            line-height: 26px;
+            border-left: 2px solid #d9dde1;
+            font-size: 12px;
+            color: rgb(147, 153, 159);
+            background: #f3f5f7;
+        }
+
+        .main-wrapper .food-item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            /*margin: 18px 18px 18px 18px;*/
+            /*padding-bottom: 18px;*/
+            position: relative;
+        }
+
+        .main-wrapper .food-item ul li {
+            float: left;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .main-wrapper .food-item ul li label {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .main-wrapper .food-item .img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            border: 1px solid #eaeaea;
+        }
+
+        .img_default {
+            background-image: url('static/images/default.jpg');
+        }
+
+        .course-label {
+            position: absolute;
+            bottom: 6px;
+            left: 8px;
+            font-size: 12px;
+            color: #FFF;
+            line-height: 16px;
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .course-label label {
+            display: inline-block;
+            background: rgba(7, 17, 27, .4);
+            border-radius: 12px;
+            padding: 4px 8px;
+            margin-bottom: 2px;
+            margin-right: 0;
+            font-weight: 200;
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        .swiper-wrapper {
+            transition: all 1s;
+        }
+
+        .title_fix {
+            margin-top: 0px;
+            padding-left: 14px;
+            height: 26px;
+            line-height: 26px;
+            border-left: 2px solid #30a5c7;
+            font-size: 12px;
+            color: #333;
+            background: #f3f5f7;
+            position: fixed;
+            margin-left: 80px;
+            z-index: 999;
+            width: 100%;
+        }
+
+
+        .obj {
+            width: 53px;
+            height: 53px;
+            margin: 3% auto 5%;
+            border-radius: 50%;
+        }
+
+        .obj img {
+            width: 27px;
+            height: auto;
+            margin: 13px;
+        }
+
+        .card {
+            margin: 0;
+            padding: 5% 5px;
+            height: auto;
+        }
+
+        .card .obj-title {
+            font-size: 0.8rem;
+            width: 60px;
+            margin: 0 auto;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="content-wrapper">
+        <div class="avatar">
+            <img width="64" height="64" src="static/images/user.png">
+        </div>
+        <div class="content">
+            <div class="title">
+                <span class="name">管理员</span>
+            </div>
+            <div class="passname">
+                <span class="">账号：123546465</span>
+            </div>
+            <div class="tel">
+                <span class="">手机：15000737353</span>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="operate">
+    <span><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改密码</span>
+    <p>|</p>
+    <span><span class="glyphicon glyphicon-random" aria-hidden="true"></span>切换账号</span>
+</div>
+<div class="depart">
+    <div class="depart_sign">
+        <!--<span>部门</span>-->
+    </div>
+    <div class="depart-wrapper">
+        <div class="depart-wrapper">
+            <div id="muen" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="menu-wrapper">
+                            <ul>
+                                <li class="menu-item active">
+                                    <span class="text">巴黎时装学院</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">财务处</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">党委研究生工作部</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">国际交流学院</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">后勤</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">计算机学院</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">教务处</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">经济管理中心</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">乐乎集团</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span class="text">离退休处</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-wrapper">
+                <div id="main" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div id="part" class="part">
+                                <div class="col-xs-12 main_list">
+                                    <div class="col-xs-4 card A-card">
+                                        <div class="pink obj"><img src="img/mobile-meet.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card A-card">
+                                        <div class="blue obj"><img src="img/mobile-book.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card A-card">
+                                        <div class="yello obj"><img src="img/mobile-building.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 main_list">
+                                    <div class="col-xs-4 card A-card">
+                                        <div class="blue obj"><img src="img/mobile-rest.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card B-card">
+                                        <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card C-card">
+                                        <div class="purple obj"><img src="img/mobile-system.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 main_list">
+                                    <div class="col-xs-4 card C-card">
+                                        <div class="pink obj"><img src="img/mobile-search.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card C-card">
+                                        <div class="blue obj"><img src="img/mobile-space.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card D-card">
+                                        <div class="pink obj"><img src="img/mobile-paper.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 main_list">
+                                    <div class="col-xs-4 card D-card">
+                                        <div class="blue obj"><img src="img/mobile-water.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card E-card">
+                                        <div class="yello obj"><img src="img/mobile-book.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card E-card">
+                                        <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 main_list">
+                                    <div class="col-xs-4 card F-card">
+                                        <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card F-card">
+                                        <div class="purple obj"><img src="img/mobile-search.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                    <div class="col-xs-4 card G-card">
+                                        <div class="pink obj"><img src="img/mobile-building.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 main_list">
+                                    <div class="col-xs-4 card H-card">
+                                        <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
+                                        <div class="obj-title">项目列表项目列表项目列表项目列表</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title_fix">巴黎时装学院</div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+<script type="text/javascript">
+    var swipermuen = new Swiper('#muen', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true
+    });
+    var swipermain = new Swiper('#main', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        on: {
+            // 监听内容滑动区域scrollY,过度结束时
+            transitionEnd: function () {
+                var active_scrollY = (scrollY.css("transform").replace(/[^0-9\-\.,]/g, '').split(',')[5]);
+                for (var i = 0; i < main_list_len; i++) {
+                    if (active_scrollY <= tabs_MAIN_H_list[i] && active_scrollY > tabs_MAIN_H_list[i + 1]) {
+                        let newindex = i + 1;
+                        tabs.removeClass('active');
+                        tabs.eq(newindex).addClass('active');
+                        //console.log(active_scrollY)
+                        //console.log(tabs.eq(newindex).text())
+                        fix_title.html(tabs.eq(newindex).text());
+                    }
+                    if (active_scrollY > tabs_MAIN_H_list[0]) {
+                        tabs.removeClass('active');
+                        tabs.eq(0).addClass('active');
+                        fix_title.css("display", "block");
+                        fix_title.html("巴黎时装学院");
+                        //console.log(active_scrollY)
+                        //fix_title.css("display","none");
+                    }
+                }
+            },
+            touchMove: function (event) {
+                var active_scrollY = (scrollY.css("transform").replace(/[^0-9\-\.,]/g, '').split(',')[5]);
+                // console.log(active_scrollY)
+                if (active_scrollY > 0) {
+                    fix_title.css("display", "none");
+                }
+            }
+        }
+    });
+
+    var MAIN_H_list = [];
+    var tabs_MAIN_H_list = [];
+    var main_list_len = $(".main_list").length;
+    var tabs = $(".menu-wrapper li");
+    var scrollY = $(".main-wrapper .swiper-wrapper");
+    var H = 0;
+    var fix_title = $(".title_fix")
+
+    for (var i = 0; i < main_list_len; i++) {
+        // 加上marginButtom的边距
+        var list = -($(".main_list").eq(i).height() + 10);
+        MAIN_H_list.push(list);
+    }
+    ;
+
+    for (var i = 0; i < main_list_len; i++) {
+        var tab_H_ITEM = MAIN_H_list[i];
+        H += tab_H_ITEM;
+        tabs_MAIN_H_list.push(H);
+    }
+    ;
+
+    tabs.click(function () {
+        tabs.removeClass("active");
+        $(this).addClass("active");
+        // 获取当前点击的index
+        var index = $(this).index();
+        var indexActive = 0;
+        for (var i = 0; i < index; i++) {
+            indexActive += MAIN_H_list[i];
+        }
+        indexActive = indexActive + 'px';
+        // console.log(indexActive);
+        // 每次点击首先清除SWIPER原先添加样式
+        scrollY.removeAttr("style");
+        scrollY.animate({}, function () {
+            scrollY.css({"transform": "translate3d(0px, " + indexActive + " , 0px)"});
+            fix_title.html($(".menu-wrapper li span").eq(index).text());
+            // console.log($(".menu-wrapper li span").eq(index).text());
+        })
+    });
+</script>
+</html>
