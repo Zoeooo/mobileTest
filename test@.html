@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="test/assets/js/jquery-1.10.2.js"></script>
+    <style>
+        .CCC{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<nav class="AAA">
+    <div>123</div>
+    <div>345</div>
+    <div>1231246</div>
+</nav>
+<script>
+    let E_list = [];
+    let L = $('nav div').length;
+    const C_list = document.getElementsByClassName("AAA")[0];
+    for(var i = 0;i < L;i++){
+        E_list.push(C_list.children[i].innerHTML.toString());
+        for (var j = 0;j < E_list.length;j++){
+            console.log(E_list[j].length);
+            if(E_list[j].length > 5){
+                $(C_list.children[i]).addClass('CCC');
+            }
+        }
+    }
+</script>
+</body>
+</html>

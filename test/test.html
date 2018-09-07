@@ -27,6 +27,7 @@
         }
 
         .content-wrapper {
+            height: 120px;
             position: relative;
             padding: 24px 12px 30px 24px;
             font-size: 0;
@@ -116,7 +117,7 @@
 
         .menu-wrapper {
             flex: 0 0 80px;
-            width: 80px;
+            width: 100%;
             background: #f3f5f7;
             height: 100%;
         }
@@ -132,22 +133,49 @@
             padding: 0 12px;
             line-height: 14px;
         }
+
+        .key {
+            width: 100%;
+            height: 47px;
+            line-height: 47px;
+            text-align: center;
+            background-color: #fafafa;
+            border-right: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .key a {
+
+            width: inherit;
+            color: #333;
+            font-weight: normal;
+            height: 47px;
+            /*line-height: 47px;*/
+            text-align: center;
+            text-decoration: none;
+        }
+
         .active {
-            border-left: 2px solid #0BBEF1;
-            color: #0BBEF1 !important;
-            border-right: none !important;
             position: relative;
             z-index: 10;
+            border-left: 2px solid #0BBEF1;
+            color: #0BBEF1;
+            border-right: none;
             margin-top: -1px;
             background: #fff;
             font-weight: 700;
         }
+
+        .active a {
+            color: #0BBEF1;
+        }
+
         /*.active {*/
-            /*position: relative;*/
-            /*z-index: 10;*/
-            /*margin-top: -1px;*/
-            /*background: #fff;*/
-            /*font-weight: 700;*/
+        /*position: relative;*/
+        /*z-index: 10;*/
+        /*margin-top: -1px;*/
+        /*background: #fff;*/
+        /*font-weight: 700;*/
         /*}*/
 
         .text {
@@ -185,6 +213,14 @@
             padding: 0;
             list-style: none;
             /*margin-bottom: 18px;*/
+        }
+
+        .groupA .A-card, .groupB .B-card,
+        .groupC .C-card, .groupD .D-card,
+        .groupE .E-card, .groupF .F-card,
+        .groupG .G-card, .groupH .H-card,
+        .groupL .L-card {
+            background-color: #f00;
         }
 
         .main-wrapper ul .title {
@@ -287,7 +323,6 @@
             width: 100%;
         }
 
-
         .obj {
             width: 53px;
             height: 53px;
@@ -317,74 +352,54 @@
             overflow: hidden;
             -webkit-line-clamp: 2;
         }
+
+        .key {
+            width: 100%;
+            height: 47px;
+            background-color: #fafafa;
+
+        }
+
+        .twoLine {
+            line-height: 23px;
+        }
+
+        .side {
+            width: 25%;
+            height: 100%;
+            background-color: #fff;
+        }
     </style>
 </head>
 <body>
 <header>
     <div class="content-wrapper">
-        <div class="avatar">
-            <img width="64" height="64" src="static/images/user.png">
-        </div>
-        <div class="content">
-            <div class="title">
-                <span class="name">管理员</span>
-            </div>
-            <div class="passname">
-                <span class="">账号：123546465</span>
-            </div>
-            <div class="tel">
-                <span class="">手机：15000737353</span>
-            </div>
-        </div>
     </div>
 </header>
-<div class="operate">
-    <span><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改密码</span>
-    <p>|</p>
-    <span><span class="glyphicon glyphicon-random" aria-hidden="true"></span>切换账号</span>
-</div>
 <div class="depart">
-    <div class="depart_sign">
-        <!--<span>部门</span>-->
-    </div>
     <div class="depart-wrapper">
         <div class="depart-wrapper">
-            <div id="muen" class="swiper-container">
+            <div id="muen" class="side swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="menu-wrapper">
-                            <ul>
-                                <li class="menu-item active">
-                                    <span class="text">巴黎时装学院</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">财务处</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">党委研究生工作部</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">国际交流学院</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">后勤</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">计算机学院</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">教务处</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">经济管理中心</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">乐乎集团</span>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="text">离退休处</span>
-                                </li>
-                            </ul>
+                            <div class="key" onclick="change('groupA')"><a href="#">财务处</a></div>
+                            <div class="key" onclick="change('groupB')"><a href="#">国际交流学院</a></div>
+                            <div class="key" onclick="change('groupC')"><a href="#">经济管理中心</a></div>
+                            <div class="key" onclick="change('groupD')"><a href="#">教务处</a></div>
+                            <div class="key" onclick="change('groupE')"><a href="#">后勤处</a></div>
+                            <div class="key" onclick="change('groupF')"><a href="#">计算机学院</a></div>
+                            <div class="key" onclick="change('groupG')"><a href="#">财务处</a></div>
+                            <div class="key" onclick="change('groupH')"><a href="#">国际交流学院</a></div>
+                            <div class="key" onclick="change('groupJ')"><a href="#">计算机学院</a></div>
+                            <div class="key" onclick="change('groupK')"><a href="#">财务处</a></div>
+                            <div class="key" onclick="change('groupL')"><a href="#">国际交流学院</a></div>
+                            <div class="key" onclick="change('groupF')"><a href="#">计算机学院</a></div>
+                            <div class="key" onclick="change('groupG')"><a href="#">财务处</a></div>
+                            <div class="key" onclick="change('groupH')"><a href="#">国际交流学院</a></div>
+                            <div class="key" onclick="change('groupJ')"><a href="#">计算机学院</a></div>
+                            <div class="key" onclick="change('groupK')"><a href="#">财务处</a></div>
+                            <div class="key" onclick="change('groupL')"><a href="#">国际交流学院</a></div>
                         </div>
                     </div>
                 </div>
@@ -407,8 +422,6 @@
                                         <div class="yello obj"><img src="img/mobile-building.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 main_list">
                                     <div class="col-xs-4 card A-card">
                                         <div class="blue obj"><img src="img/mobile-rest.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
@@ -421,8 +434,6 @@
                                         <div class="purple obj"><img src="img/mobile-system.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 main_list">
                                     <div class="col-xs-4 card C-card">
                                         <div class="pink obj"><img src="img/mobile-search.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
@@ -435,8 +446,6 @@
                                         <div class="pink obj"><img src="img/mobile-paper.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 main_list">
                                     <div class="col-xs-4 card D-card">
                                         <div class="blue obj"><img src="img/mobile-water.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
@@ -449,8 +458,6 @@
                                         <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 main_list">
                                     <div class="col-xs-4 card F-card">
                                         <div class="lightblue obj"><img src="img/mobile-rests.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
@@ -463,8 +470,6 @@
                                         <div class="pink obj"><img src="img/mobile-building.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 main_list">
                                     <div class="col-xs-4 card H-card">
                                         <div class="blue obj"><img src="img/mobile-meet.png" alt=""></div>
                                         <div class="obj-title">项目列表项目列表项目列表项目列表</div>
@@ -475,14 +480,36 @@
                     </div>
                 </div>
             </div>
-            <div class="title_fix">巴黎时装学院</div>
         </div>
     </div>
 </div>
 </body>
-
+<script>
+    window.onresize = function () {
+        let E_list = [];
+        let list_L = $('.menu-wrapper .key').length;
+        let W = $(document.body).outerWidth(true);
+        const C_list = $(".key");
+        for (var i = 0; i < list_L; i++) {
+            E_list.push(C_list[i].children[0].innerHTML);
+            for (var j = 0; j < E_list.length; j++) {
+                if (W < 340 && E_list[j].length > 5) {
+                    $(C_list[j]).addClass('twoLine');
+                } else if (W < 280 && E_list[j].length > 4) {
+                    $(C_list[j]).addClass('twoLine');
+                } else {
+                    $(C_list[j]).removeClass('twoLine');
+                }
+            }
+        }
+    };
+</script>
 
 <script type="text/javascript">
+    const child = $('#main');
+    function change(className) {
+        child.removeClass().addClass(className);
+    }
     var swipermuen = new Swiper('#muen', {
         direction: 'vertical',
         slidesPerView: 'auto',
@@ -491,80 +518,83 @@
     var swipermain = new Swiper('#main', {
         direction: 'vertical',
         slidesPerView: 'auto',
-        freeMode: true,
-        on: {
-            // 监听内容滑动区域scrollY,过度结束时
-            transitionEnd: function () {
-                var active_scrollY = (scrollY.css("transform").replace(/[^0-9\-\.,]/g, '').split(',')[5]);
-                for (var i = 0; i < main_list_len; i++) {
-                    if (active_scrollY <= tabs_MAIN_H_list[i] && active_scrollY > tabs_MAIN_H_list[i + 1]) {
-                        let newindex = i + 1;
-                        tabs.removeClass('active');
-                        tabs.eq(newindex).addClass('active');
-                        //console.log(active_scrollY)
-                        //console.log(tabs.eq(newindex).text())
-                        fix_title.html(tabs.eq(newindex).text());
-                    }
-                    if (active_scrollY > tabs_MAIN_H_list[0]) {
-                        tabs.removeClass('active');
-                        tabs.eq(0).addClass('active');
-                        fix_title.css("display", "block");
-                        fix_title.html("巴黎时装学院");
-                        //console.log(active_scrollY)
-                        //fix_title.css("display","none");
-                    }
-                }
-            },
-            touchMove: function (event) {
-                var active_scrollY = (scrollY.css("transform").replace(/[^0-9\-\.,]/g, '').split(',')[5]);
-                // console.log(active_scrollY)
-                if (active_scrollY > 0) {
-                    fix_title.css("display", "none");
-                }
-            }
-        }
+        freeMode: true
     });
 
-    var MAIN_H_list = [];
-    var tabs_MAIN_H_list = [];
-    var main_list_len = $(".main_list").length;
-    var tabs = $(".menu-wrapper li");
-    var scrollY = $(".main-wrapper .swiper-wrapper");
-    var H = 0;
-    var fix_title = $(".title_fix")
+    let MAIN_H_list = [];
+    let tabs_MAIN_H_list = [];
+    let main_list_len = $(".main_list").length;
+    let tabs = $(".menu-wrapper .key");
+    let scrollY = $(".main-wrapper .swiper-wrapper");
+    let H = 0;
 
     for (var i = 0; i < main_list_len; i++) {
-        // 加上marginButtom的边距
-        var list = -($(".main_list").eq(i).height() + 10);
+        var list = -($(".card").height() + 10);
         MAIN_H_list.push(list);
     }
-    ;
 
-    for (var i = 0; i < main_list_len; i++) {
-        var tab_H_ITEM = MAIN_H_list[i];
-        H += tab_H_ITEM;
+    for (var j = 0; i < main_list_len; i++) {
+        let tab_H_Time = MAIN_H_list[j];
+        H += tab_H_Time;
         tabs_MAIN_H_list.push(H);
     }
-    ;
-
+    console.log(MAIN_H_list);
+    let num = [];
+    let classNameList = $('.main_list').children('div').attr("className", "card").splice(",");
+    let newList = [];
+    let finaList = [];
     tabs.click(function () {
         tabs.removeClass("active");
         $(this).addClass("active");
         // 获取当前点击的index
         var index = $(this).index();
+        var activeH = 0;
         var indexActive = 0;
-        for (var i = 0; i < index; i++) {
-            indexActive += MAIN_H_list[i];
+        let arr = [];
+        let AAA = [];
+        for (var i = 0; i < classNameList.length; i++) {
+            newList.push(classNameList[i].className);
+            finaList.push(newList[i].replace("col-xs-4 card ", ""));
         }
-        indexActive = indexActive + 'px';
-        // console.log(indexActive);
-        // 每次点击首先清除SWIPER原先添加样式
+        finaList.sort();
+        for (var i = 0; i < finaList.length;) {
+            var count = 0;
+            for (var j = i; j < finaList.length; j++) {
+                if (finaList[i] === finaList[j]) {
+                    count++;
+                }
+            }
+            arr.push(
+                    count
+            );
+            i += count;
+        }
+        for (var k = 0; k < arr.length; k++) {
+            AAA.push(arr[k]);
+        }
+        let B = [0];
+        for(var i = 0;i <= AAA.length;i++){
+            B.push(AAA[i] + B[i]);
+            if (parseInt(B[i] / 3) >= 1) {
+                num.push(parseInt(B[i]  / 3));
+            }else if((B[i]  % 3) !== 0){
+                num.push(parseInt(B[i]  / 3));
+            }else if (parseInt(B[i]  / 3) < 1) {
+                num.push(0);
+            }
+            console.log(B);
+            console.log(num);
+        }
+        for (var i = 0; i < index; i++) {
+            activeH = MAIN_H_list[0] * (num[i]);
+            console.log(activeH);
+        }
+        indexActive = activeH  + 'px';
         scrollY.removeAttr("style");
         scrollY.animate({}, function () {
             scrollY.css({"transform": "translate3d(0px, " + indexActive + " , 0px)"});
-            fix_title.html($(".menu-wrapper li span").eq(index).text());
-            // console.log($(".menu-wrapper li span").eq(index).text());
         })
     });
 </script>
+
 </html>
